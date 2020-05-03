@@ -1,0 +1,23 @@
+{
+  "name": "01-06-git",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/makotomakoto/git-firststep.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/makotomakoto/git-firststep/issues"
+  },
+  "homepage": "https://github.com/makotomakoto/git-firststep#readme",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
