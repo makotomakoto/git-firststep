@@ -20,7 +20,8 @@
 
             methods: {
                 getData: async function(){
-                  const responce = await axios.get('data.json')
+                  //const responce = await axios.get('data.json')
+                  const response = await axios.get('https://www.boredapi.com/api/activity?participants=1');
                   console.log(responce.data);
                   this.message = responce.data
                 },
