@@ -8,6 +8,7 @@
     <div id="app">
         <p>{{ message }}</p>
         <p>{{ message02 }}</p>
+        <p>{{ message_yamanote }}</p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -17,22 +18,24 @@
             el: '#app',
             data: {
                 message: 'Hello Vue!',
-                message02: 'Hello Vue!'
+                message02: 'Hello Vue!',
+                message_yamanote:"yamanote"
             },
 
             methods: {
                 getData: async function(){
                   //const responce = await axios.get('data.json')
                   const response = await axios.get('https://www.boredapi.com/api/activity?participants=1');
-                  console.log(response.data);
-
-
+                  //console.log(response.data);
                   this.message = response.data.activity
                   
                   const response02 = await axios.get('https://www.boredapi.com/api/activity?participants=1');
                   //console.log(response.data);
                   this.message02 = response02.data.activity
-                },
+             
+                  const response_yamanote = await axios.get('./data.json');
+                  //console.log(response.data);
+                  this.message_yamanote = response_yamanote.data.activity
             },
 
             mounted: function(){
