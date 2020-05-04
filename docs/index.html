@@ -35,7 +35,8 @@
              
                   const response_yamanote = await axios.get('./data.json');
                   //console.log(response.data);
-                  this.message_yamanote = response_yamanote.data.activity
+                  this.message_yamanote = response_yamanote.data.msg
+                }
             },
 
             mounted: function(){
