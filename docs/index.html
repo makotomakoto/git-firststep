@@ -24,17 +24,13 @@
 
             methods: {
                 getData: async function(){
-                  //const responce = await axios.get('data.json')
                   const response = await axios.get('https://www.boredapi.com/api/activity?participants=1');
-                  //console.log(response.data);
                   this.message = response.data.activity
                   
                   const response02 = await axios.get('https://www.boredapi.com/api/activity?participants=1');
-                  //console.log(response.data);
-                  this.message02 = response02.data.activity
+                  this.messagef02 = response02.data.activity
              
                   const response_yamanote = await axios.get('./data.json');
-                  //console.log(response.data);
                   this.message_yamanote = response_yamanote.data.msg
                 }
             },
