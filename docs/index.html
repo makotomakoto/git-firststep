@@ -28,7 +28,7 @@
                   this.message = response.data.activity
                   
                   const response02 = await axios.get('https://www.boredapi.com/api/activity?participants=1');
-                  this.messagef02 = response02.data.activity
+                  this.message02 = response02.data.activity
              
                   const response_yamanote = await axios.get('./data.json');
                   this.message_yamanote = response_yamanote.data.msg
