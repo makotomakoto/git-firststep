@@ -1,12 +1,13 @@
 <html>
   <head>
-    <title>Hello My WebSite!</title>
+    <title>Hello!</title>
   </head>
   <body>
-    <p>Hello, ProtoOut!</p>
+    <p>Hello!</p>
 
     <div id="app">
-        {{ message }}
+        <p>{{ message }}</p>
+        <p>{{ message02 }}</p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -15,7 +16,8 @@
         const app = new Vue({
             el: '#app',
             data: {
-                message: 'Hello Vue!'
+                message: 'Hello Vue!',
+                message02: 'Hello Vue!'
             },
 
             methods: {
@@ -29,7 +31,7 @@
                   
                   const response02 = await axios.get('https://www.boredapi.com/api/activity?participants=1');
                   //console.log(response.data);
-                  this.message += response02.data.activity
+                  this.message02 = response02.data.activity
                 },
             },
 
