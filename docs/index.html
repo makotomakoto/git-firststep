@@ -1,17 +1,35 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<html>
+  <head>
+    <title>Hello My WebSite!</title>
+  </head>
+  <body>
+    <p>Hello, ProtoOut!</p>
 
-    <h1>hayase</h1>
-    <p><img src="./img/me.png" alt=""></p>
-    <h2>bookmarks</h2>
-    <ul>
-      <li>github:<a href="https://github.com/makotomakoto">https://github.com/makotomakoto</a></li>
-    </ul>
+    <div id="app">
+        {{ message }}
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!'
+            },
+
+            methods: {
+                getData: async function(){
+                  const responce = await axios.get('data.json')
+                  console.log(responce.data);
+                  this.message = responce.data
+                },
+            },
+
+            mounted: function(){
+              this.getData();
+            }
+        })
+     </script>
   </body>
 </html>
