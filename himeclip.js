@@ -22,8 +22,7 @@ function search_date_key(set_date,set_month,set_year){
 
 //LINE
 const LINE_NOTIFY_API_URL = 'https://notify-api.line.me/api/notify';
-//const LINE_NOTIFY_TOKEN = process.env.LINE_TOKEN;
-const LINE_NOTIFY_TOKEN = '41kHgMvKf2kDMeOJT98JlkEgxzJhI21zpAli1Jmh2Vh';
+const LINE_NOTIFY_TOKEN = process.env.LINE_TOKEN;
 
 let config = {
     url: LINE_NOTIFY_API_URL,
